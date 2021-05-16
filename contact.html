@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us - Click Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit =no">
+  <link rel="stylesheet" type="text/css" href="Assets/bootstrap.css">
+  <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="banner">
+    <center>
+      <a href="index.html">
+        <img class="logo" src="Assets/clickcafe-header.png">
+      </a>
+    </center>
+  </div>
+  <div class="header">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services</a>
+      </li>
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cntrd">
+    <form>
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="Name" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="example@youremail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" rows="5" id="message" required></textarea>
+      </div>
+      <center><button type="submit" class="btn btn-primary">Submit</button></center>
+      <div class="map" id="loc">
+
+      </div>
+  </div>
+
+  <div class="ftr">
+    <div>
+      <div class="logo-pos">
+        <a href="index.html">
+          <img src="Assets/clickcafe-header.png" class="footer-logo">
+        </a>
+      </div>
+      <div class="cpyrght">
+        <center>
+          <p class="text-white">&copy; 2017 Coo Clocks Clan</p>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function myMap() {
+      var mapOptions = {
+        center: new google.maps.LatLng(14.6042, 120.9886),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+      }
+      var map = new google.maps.Map(document.getElementById("loc"), mapOptions);
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(14.6042, 120.9886)
+        , map: map
+      })
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCuIprTn8C5sMM3lMXPRmdCEWL0SgC_Mk&callback=myMap"></script>
+
+
+</body>
+
+</html>
